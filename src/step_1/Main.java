@@ -29,4 +29,16 @@ package step_1;
  */
 
 public class Main {
+    public static void main(String[] args) {
+        System.out.println("""
+                The secret code is prepared: ****.
+                Turn 1. Answer:
+                1234
+                Grade: 1 cow.
+                Turn 2. Answer:
+                9305
+                Grade: 1 cow.
+                Congrats! The secret code is 9305.
+                """);
+    }
 }
