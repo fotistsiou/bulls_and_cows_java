@@ -1,5 +1,7 @@
 package step_2;
 
+import java.util.Scanner;
+
 /**
  * Grader
  * ------
@@ -31,4 +33,34 @@ package step_2;
  */
 
 public class Main {
+    static char[] secretCode = {'9', '3', '0', '5'};
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String guess = scanner.nextLine();
+        char[] guessToCharArray = guess.toCharArray();
+        int cows = 0;
+        int bulls = 0;
+        for (int i = 0; i < guessToCharArray.length; i++) {
+            for (int j = 0; j < secretCode.length; j++) {
+                if (guessToCharArray[i] == secretCode[j] && i == j) {
+                    bulls++;
+                    continue;
+                }
+                if (guessToCharArray[i] == secretCode[j]) {
+                    cows++;
+                }
+            }
+        }
+        if (bulls == 0 && cows == 0) {
+            System.out.println("Grade: None. The secret code is 9305.");
+        } else if (bulls == 0) {
+            System.out.println("Grade: " + cows + " cow(s). The secret code is 9305.");
+        } else if (cows == 0) {
+            System.out.println("Grade: " + bulls + " bull(s). The secret code is 9305.");
+        } else {
+            System.out.println("Grade: " + bulls + " bull(s) and " + cows + " cow(s). The secret code is 9305.");
+        }
+        scanner.close();
+    }
 }
