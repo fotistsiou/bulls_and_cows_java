@@ -35,6 +35,8 @@ to get it built. Here’s what awaits you:
     - Data types and their sizes
     - Type casting
     - Characters
+    - IDE
+    - IntelliJ IDEA
 - Stage 2/7: Grader
   - Implement the grading mechanism.
   - Stage Topics:
@@ -50,13 +52,10 @@ to get it built. Here’s what awaits you:
     - Primitive and reference types
     - Array
     - String
-    - IDE
     - What are bugs
     - Processing strings
     - Debugging overview
-    - IntelliJ IDEA
     - Run and debug with IntelliJ IDEA
-    - Debugging simple constructs
 - Stage 3/7: Secret code
   - Create a simple random number generator.
   - Stage Topics:
@@ -69,6 +68,7 @@ to get it built. Here’s what awaits you:
     - Defining classes
     - Objects and their properties
     - StringBuilder
+    - Debugging simple constructs
 - Stage 4/7: Game time!
   - Make a fully functional classic version of the game.
 - Stage 5/7: Improve the code generator
