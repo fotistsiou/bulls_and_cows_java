@@ -1,7 +1,7 @@
 # Bulls and Cows
 
 ## Project Details
-> - **Level**: 🌟🌟🌟 Hard | **Time**: 🕒 ~16 hours
+> - **Level**: 🌟🌟🌟🌟 Challenging | **Time**: 🕒 ~16 hours
 > - **Course**: [Introduction to Java](https://hyperskill.org/courses/8-introduction-to-java)
 > - **Project**: [Bulls and Cows](https://hyperskill.org/projects/53?track=8)
 > - **Description**: Learn how to use integer arithmetic, generate random numbers, store data in data structures, and 
@@ -44,13 +44,19 @@ to get it built. Here’s what awaits you:
     - Comparing values. Relational operators
     - Conditional statement
     - One-line condition with ternary operator
-    - While and do-while loops
     - For loop
+    - While and do-while loops
     - Break and continue. Branching
     - Primitive and reference types
     - Array
     - String
+    - IDE
+    - What are bugs
     - Processing strings
+    - Debugging overview
+    - IntelliJ IDEA
+    - Run and debug with IntelliJ IDEA
+    - Debugging simple constructs
 - Stage 3/7: Secret code
   - Create a simple random number generator.
   - Stage Topics:
@@ -59,14 +65,12 @@ to get it built. Here’s what awaits you:
     - Multiple conditions: switch
     - Functional decomposition
     - Write, compile, and run
+    - What is object-oriented programming
     - Defining classes
     - Objects and their properties
     - StringBuilder
 - Stage 4/7: Game time!
   - Make a fully functional classic version of the game.
-  - Stage Topics:
-    - IDE
-    - IntelliJ IDEA
 - Stage 5/7: Improve the code generator
   - Rewrite the random number generator using the built-in java tools.
 - Stage 6/7: New level
