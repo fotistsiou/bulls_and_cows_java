@@ -1,5 +1,7 @@
 package step_3;
 
+import java.util.Scanner;
+
 /**
  * Secret code
  * -----------
@@ -24,4 +26,55 @@ package step_3;
  */
 
 public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int length = scanner.nextInt();
+        scanner.nextLine();
+        Main.generateRandomCode(length);
+        scanner.close();
+    }
+
+    static void generateRandomCode(int length) {
+        if (length > 10) {
+            System.out.printf(
+                    "Error: can't generate a secret number with a length of %d because there aren't enough unique digits.",
+                    length
+            );
+            return;
+        }
+
+        char[] secretCode = new char[length];
+        int counter = 0;
+
+        while (counter < length) {
+            long pseudoRandomNumber = System.nanoTime();
+            StringBuilder stringBuilder = new StringBuilder(String.valueOf(pseudoRandomNumber)).reverse();
+            for (char c : stringBuilder.toString().toCharArray()) {
+                if (counter == 0) {
+                    if (c == '0') {
+                        continue;
+                    }
+                    secretCode[counter] = c;
+                    counter++;
+                }
+                if (counter == secretCode.length) {
+                    System.out.print("The random secret number is " + String.valueOf(secretCode));
+                    return;
+                }
+                if (Main.isUnique(secretCode, c, counter)) {
+                    secretCode[counter] = c;
+                    counter++;
+                }
+            }
+        }
+    }
+
+    static boolean isUnique(char[] secretCode, char c, int counter) {
+        for (int i = 0; i < counter; i++) {
+            if (secretCode[i] == c) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
